@@ -1,4 +1,5 @@
 import sys
+from pathlib import Path
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QMainWindow)
 from PyQt5.QtGui import QFont
 
@@ -8,14 +9,7 @@ class ChessMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Chess Repertoire Hub - Dashboard")
-        self.setStyleSheet("""
-            QMainWindow {
-                background: #12151B;
-            }
-            QWidget {
-                font-family: 'Segoe UI', Arial, sans-serif;
-            }
-        """)
+        self.setStyleSheet(Path("styles/mainwindow.qss").read_text())
         
         # Create central widget
         central_widget = QWidget()

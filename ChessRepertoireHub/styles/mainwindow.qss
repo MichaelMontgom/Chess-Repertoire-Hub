@@ -1,0 +1,6 @@
+QMainWindow {
+    background: #12151B;
+}
+QWidget {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
